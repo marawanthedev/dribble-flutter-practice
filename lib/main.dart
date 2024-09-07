@@ -1,3 +1,6 @@
+import 'package:dribblepractice/presentation/views/holiday/holiday.dart';
+import 'package:dribblepractice/presentation/views/home/home.dart';
+import 'package:dribblepractice/presentation/views/search/search.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +20,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Text('hi'),
+      routes: {
+        '/': (context) => const HomePage(),
+        '/holiday': (context) => const Holiday(),
+        '/search': (context) => const Search(),
+      },
+      initialRoute: '/',
     );
   }
 }
