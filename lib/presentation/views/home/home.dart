@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                  height: 200,
+                  height: 250,
                   child: Stack(
                     children: [
                       Container(
@@ -86,8 +86,8 @@ class HomePage extends StatelessWidget {
                                   color: Colors.white),
                             ),
                             CustomElevatedButton(
-                              onPressed: () => print('it hurts'),
-                              text: 'hurt me',
+                              onPressed: () => print('Book Now'),
+                              text: 'Book Now',
                             )
                           ],
                         ),
