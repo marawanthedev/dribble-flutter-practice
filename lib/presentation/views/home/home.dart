@@ -5,7 +5,9 @@ import 'dart:math';
 import 'package:dribblepractice/configs/assets/app_images.dart';
 import 'package:dribblepractice/presentation/views/home/constants/ImageCardSize.dart';
 import 'package:dribblepractice/presentation/views/home/constants/colors.dart';
+import 'package:dribblepractice/presentation/views/home/constants/navigation_bar_items.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/categories.section.dart';
+import 'package:dribblepractice/presentation/views/home/widgets/gallery.section.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/hero.section.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/motive.section.dart';
 import 'package:dribblepractice/presentation/widgets/ImageCard/ImageCard.dart';
@@ -68,18 +70,14 @@ class _HomePageState extends State<HomePage> {
           ]),
       body: Container(
           padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              const HeroSection(),
-              const CategoriesSection(),
-              const Motive(),
-              ImageCard(
-                  imagePath: AppImages.thailandBg,
-                  size: ImageCardSize.getSize(ImageCardSizes.lg, context),
-                  cardUpperOverlay: const Text('hi'),
-                  cardLowerOverlay: const Text('bye'))
-            ],
-          )),
+          child: const SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(children: [
+                HeroSection(),
+                CategoriesSection(),
+                Motive(),
+                GallerySection()
+              ]))),
       bottomNavigationBar: BottomNavigationBar(
           showUnselectedLabels: true,
           unselectedItemColor: AppColors.grey,
@@ -92,10 +90,10 @@ class _HomePageState extends State<HomePage> {
           },
           iconSize: 18,
           items: [
-            ...[].map(
-              (e) => BottomNavigationBarItem(
-                icon: Icon(e),
-                label: 'a7a',
+            ...navigationBarItems.map(
+              (item) => BottomNavigationBarItem(
+                icon: Icon(item.icon),
+                label: item.label,
               ),
             ),
           ]),

@@ -7,11 +7,11 @@ class ImageCardSize {
     switch (size) {
       case ImageCardSizes.lg:
         return Size(
-            MediaQuery.of(ctx).size.width, 100); // Adjust dimensions as needed
+            MediaQuery.of(ctx).size.width, 150); // Adjust dimensions as needed
       case ImageCardSizes.md:
-        return Size(MediaQuery.of(ctx).size.width / 2, 100);
+        return Size(MediaQuery.of(ctx).size.width / 2.25, 100);
       case ImageCardSizes.sm:
-        return Size(MediaQuery.of(ctx).size.width / 4, 100);
+        return Size(MediaQuery.of(ctx).size.width / 4.25, 100);
       default:
         return const Size(0, 0);
     }

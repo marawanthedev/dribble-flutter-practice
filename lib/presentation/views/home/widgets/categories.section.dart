@@ -22,9 +22,12 @@ class CategoriesSection extends StatelessWidget {
               itemBuilder: (context, index) {
                 var card = categoryCards[index];
                 return CategoryCard(
-                    icon: card.icon, label: card.label, index: index
-                    // adding a key is a good idea, will look back into it
-                    );
+                  icon: card.icon,
+                  label: card.label,
+                  bgColor: card.bgColor,
+                  contentColor: card.contentColor,
+                  index: index,
+                );
               },
             ))
       ]),
