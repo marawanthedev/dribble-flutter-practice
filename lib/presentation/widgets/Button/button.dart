@@ -1,3 +1,4 @@
+import 'package:dribblepractice/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -23,7 +24,7 @@ class CustomElevatedButton extends StatelessWidget {
         onPressed: onPressed,
         style: buttonStyle ??
             ElevatedButton.styleFrom(
-              backgroundColor: Theme.of(context).colorScheme.primary,
+              backgroundColor: AppColors.primary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),

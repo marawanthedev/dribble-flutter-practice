@@ -54,9 +54,8 @@ class ImageCard extends StatelessWidget {
           ),
           if (cardCenterOverlay != null)
             Center(
-                child: Center(
-              child: Icon(MdiIcons.plus),
-            )),
+              child: cardCenterOverlay,
+            ),
           if (cardUpperOverlay != null)
             Positioned(
               top: 0,

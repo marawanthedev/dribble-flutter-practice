@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:dribblepractice/configs/assets/app_images.dart';
 import 'package:dribblepractice/presentation/views/holiday/widgets/posts.section.dart';
+import 'package:dribblepractice/presentation/views/holiday/widgets/stories.section.dart';
 import 'package:dribblepractice/presentation/views/home/constants/navigation_bar_items.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/categories.section.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/gallery.section.dart';
@@ -63,7 +64,7 @@ class _HomePageState extends State<HolidayPage> {
           padding: const EdgeInsets.all(16.0),
           child: const SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              child: Column(children: [PostSection()]))),
+              child: Column(children: [StoriesSection(), PostsSection()]))),
       bottomNavigationBar: BottomNavigationBar(
           showUnselectedLabels: true,
           unselectedItemColor: AppColors.grey,
