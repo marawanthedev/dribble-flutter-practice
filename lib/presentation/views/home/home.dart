@@ -15,13 +15,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.sizeOf(context).height,
-      width: MediaQuery.sizeOf(context).width,
-      padding: const EdgeInsets.all(16.0),
-      child: const SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Container(
+        width: MediaQuery.sizeOf(context).width,
+        padding: const EdgeInsets.all(16.0),
+        child: const Column(
           children: [
             HeroSection(),
             CategoriesSection(),

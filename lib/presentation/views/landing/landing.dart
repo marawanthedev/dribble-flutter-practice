@@ -65,10 +65,7 @@ class _LandingViewState extends State<LandingView> {
             )
           ]),
       body: Container(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: pages[currIndex],
-        ),
+        child: SingleChildScrollView(child: pages[currIndex]),
       ),
       bottomNavigationBar: BottomNavigationBar(
           showUnselectedLabels: true,

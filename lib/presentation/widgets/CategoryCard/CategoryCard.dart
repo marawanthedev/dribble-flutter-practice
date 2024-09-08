@@ -41,14 +41,16 @@ class _CategoryCardState extends State<CategoryCard> {
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(
                 widget.icon,
-                size: 60,
+                size: 45,
                 color: widget.contentColor,
               ),
               Text(
                 widget.label,
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     color: widget.contentColor, fontWeight: FontWeight.w600),
               )
