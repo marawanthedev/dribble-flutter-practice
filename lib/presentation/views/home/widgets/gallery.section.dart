@@ -1,6 +1,6 @@
 import 'package:dribblepractice/configs/assets/app_images.dart';
-import 'package:dribblepractice/presentation/views/home/constants/ImageCardSize.dart';
 import 'package:dribblepractice/presentation/widgets/ImageCard/ImageCard.dart';
+import 'package:dribblepractice/utils/ImageCardSize.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -139,7 +139,7 @@ class GallerySection extends StatelessWidget {
                   children: [
                     Icon(
                       MdiIcons.mapMarkerOutline,
-                      size: 24,
+                      size: 16,
                       color: Colors.white,
                     ),
                     const Text(

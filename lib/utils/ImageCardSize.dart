@@ -11,7 +11,7 @@ class ImageCardSize {
       case ImageCardSizes.md:
         return Size(MediaQuery.of(ctx).size.width / 2.25, 100);
       case ImageCardSizes.sm:
-        return Size(MediaQuery.of(ctx).size.width / 4.25, 100);
+        return Size(MediaQuery.of(ctx).size.width / 4.75, 150);
       default:
         return const Size(0, 0);
     }

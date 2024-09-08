@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const HomePage(),
-        '/holiday': (context) => const Holiday(),
+        '/holiday': (context) => const HolidayPage(),
         '/search': (context) => const Search(),
       },
-      initialRoute: '/',
+      initialRoute: '/holiday',
     );
   }
 }

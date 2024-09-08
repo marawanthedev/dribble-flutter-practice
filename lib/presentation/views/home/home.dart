@@ -3,14 +3,13 @@ import 'dart:math';
 // icons list referred to from https://pictogrammers.com/library/mdi/
 
 import 'package:dribblepractice/configs/assets/app_images.dart';
-import 'package:dribblepractice/presentation/views/home/constants/ImageCardSize.dart';
-import 'package:dribblepractice/presentation/views/home/constants/colors.dart';
 import 'package:dribblepractice/presentation/views/home/constants/navigation_bar_items.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/categories.section.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/gallery.section.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/hero.section.dart';
 import 'package:dribblepractice/presentation/views/home/widgets/motive.section.dart';
 import 'package:dribblepractice/presentation/widgets/ImageCard/ImageCard.dart';
+import 'package:dribblepractice/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
