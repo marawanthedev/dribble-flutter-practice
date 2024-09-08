@@ -21,8 +21,16 @@ class _LandingViewState extends State<LandingView> {
 
   final pages = [
     const HomePage(),
+    Container(
+      child: const Center(child: Text('Empty Share page')),
+    ),
     Container(),
-    Container(),
+    Container(
+      child: const Center(child: Text('Empty Promotion page')),
+    ),
+    Container(
+      child: const Center(child: Text('Empty Profile page')),
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -64,9 +72,7 @@ class _LandingViewState extends State<LandingView> {
               alignment: Alignment.center,
             )
           ]),
-      body: Container(
-        child: SingleChildScrollView(child: pages[currIndex]),
-      ),
+      body: SingleChildScrollView(child: pages[currIndex]),
       bottomNavigationBar: BottomNavigationBar(
           showUnselectedLabels: true,
           unselectedItemColor: AppColors.grey,
@@ -75,8 +81,7 @@ class _LandingViewState extends State<LandingView> {
           currentIndex: currIndex,
           onTap: (index) {
             print('index $index');
-            if (index < 2) setState(() => currIndex = index);
-            if (index > 2) setState(() => currIndex = index - 1);
+            if (index != 2) setState(() => currIndex = index);
           },
           iconSize: 18,
           items: [
