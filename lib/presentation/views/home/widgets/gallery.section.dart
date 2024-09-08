@@ -71,7 +71,7 @@ class GallerySection extends StatelessWidget {
                         ),
                         const Text(
                           'Thailand',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.white, fontSize: 18),
                         )
                       ],
                     ),
@@ -106,7 +106,7 @@ class GallerySection extends StatelessWidget {
                         ),
                         const Text(
                           'Bali',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.white, fontSize: 18),
                         )
                       ],
                     ),

@@ -1,5 +1,6 @@
 import 'package:dribblepractice/presentation/views/holiday/holiday.dart';
 import 'package:dribblepractice/presentation/views/home/home.dart';
+import 'package:dribblepractice/presentation/views/landing/landing.dart';
 import 'package:dribblepractice/presentation/views/search/search.dart';
 import 'package:flutter/material.dart';
 
@@ -24,11 +25,11 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => const LandingView(),
         '/holiday': (context) => const HolidayPage(),
-        '/search': (context) => const Search(),
+        '/search': (context) => const SearchPage(),
       },
-      initialRoute: '/holiday',
+      initialRoute: '/',
     );
   }
 }

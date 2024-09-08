@@ -43,7 +43,7 @@ class HeroSection extends StatelessWidget {
                         color: Colors.white),
                   ),
                   CustomElevatedButton(
-                    onPressed: () => print('Book Now'),
+                    onPressed: () => Navigator.pushNamed(context, '/holiday'),
                     text: 'Book Now',
                   )
                 ],

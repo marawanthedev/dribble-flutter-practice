@@ -20,7 +20,7 @@ class Motive extends StatelessWidget {
             ),
           ),
           CustomElevatedButton(
-            onPressed: () => print('See more'),
+            onPressed: () => Navigator.pushNamed(context, '/search'),
             text: 'See More',
           )
         ],

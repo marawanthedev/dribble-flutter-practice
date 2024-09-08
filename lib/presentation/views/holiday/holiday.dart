@@ -2,15 +2,9 @@ import 'dart:math';
 
 // icons list referred to from https://pictogrammers.com/library/mdi/
 
-import 'package:dribblepractice/configs/assets/app_images.dart';
 import 'package:dribblepractice/presentation/views/holiday/widgets/posts.section.dart';
 import 'package:dribblepractice/presentation/views/holiday/widgets/stories.section.dart';
 import 'package:dribblepractice/presentation/views/home/constants/navigation_bar_items.dart';
-import 'package:dribblepractice/presentation/views/home/widgets/categories.section.dart';
-import 'package:dribblepractice/presentation/views/home/widgets/gallery.section.dart';
-import 'package:dribblepractice/presentation/views/home/widgets/hero.section.dart';
-import 'package:dribblepractice/presentation/views/home/widgets/motive.section.dart';
-import 'package:dribblepractice/presentation/widgets/ImageCard/ImageCard.dart';
 import 'package:dribblepractice/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -19,10 +13,10 @@ class HolidayPage extends StatefulWidget {
   const HolidayPage({super.key});
 
   @override
-  State<HolidayPage> createState() => _HomePageState();
+  State<HolidayPage> createState() => _HolidayPageState();
 }
 
-class _HomePageState extends State<HolidayPage> {
+class _HolidayPageState extends State<HolidayPage> {
   int currIndex = 0;
 
   Color getIndexColor(int index) =>
@@ -61,41 +55,10 @@ class _HomePageState extends State<HolidayPage> {
             )
           ]),
       body: Container(
+          height: MediaQuery.of(context).size.height,
           padding: const EdgeInsets.all(16.0),
-          child: const SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(children: [StoriesSection(), PostsSection()]))),
-      bottomNavigationBar: BottomNavigationBar(
-          showUnselectedLabels: true,
-          unselectedItemColor: AppColors.grey,
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: AppColors.black,
-          currentIndex: currIndex,
-          onTap: (index) {
-            print('index $index');
-            if (index != 2) setState(() => currIndex = index);
-          },
-          iconSize: 18,
-          items: [
-            ...navigationBarItems.map(
-              (item) => BottomNavigationBarItem(
-                icon: Icon(item.icon),
-                label: item.label,
-              ),
-            ),
-          ]),
-      floatingActionButton: Container(
-        child: CircleAvatar(
-          radius: 25,
-          backgroundColor: AppColors.primary,
-          child: Icon(
-            MdiIcons.plus,
-            color: Colors.white,
-            size: 35,
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          child: const Column(
+              children: [StoriesSection(), Expanded(child: PostsSection())])),
     );
   }
 }
